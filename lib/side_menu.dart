@@ -37,23 +37,12 @@ class _SideMenuState extends State<SideMenu> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          '₹',
-                          textAlign: TextAlign.start,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 24,
-                          ),
-                        ),
-                      ),
-                      Text(
-                        '299',
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 48,
+                      ClipOval(
+                        child: Image.asset(
+                          'assets/tele.jpeg',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
                         ),
                       )
                     ],

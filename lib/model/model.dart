@@ -17,24 +17,16 @@ List<MenuItem> menuItems = [
     menuIcon: Icons.home,
   ),
   MenuItem(
-    menuName: 'Cart',
-    menuIcon: Icons.local_grocery_store,
+    menuName: 'Favoritos',
+    menuIcon: Icons.favorite,
   ),
   MenuItem(
-    menuName: 'My Account',
-    menuIcon: Icons.account_box,
+    menuName: 'Maps',
+    menuIcon: Icons.map,
   ),
   MenuItem(
-    menuName: 'Notifications',
-    menuIcon: Icons.notifications,
-  ),
-  MenuItem(
-    menuName: 'Payments',
-    menuIcon: Icons.payment,
-  ),
-  MenuItem(
-    menuName: 'Settings',
-    menuIcon: Icons.settings,
+    menuName: 'Discos',
+    menuIcon: Icons.disc_full,
   ),
 ];
 
