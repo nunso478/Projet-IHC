@@ -134,13 +134,19 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "vertical_card_pager",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/vertical_card_pager-1.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sliding_navigation_drawer",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2022-01-01T11:13:49.517194Z",
+  "generated": "2022-01-07T17:03:07.201555Z",
   "generator": "pub",
   "generatorVersion": "2.15.1"
 }

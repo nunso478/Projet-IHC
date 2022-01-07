@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'model/model.dart';
+import 'package:sliding_navigation_drawer/home.dart';
 
 class SideMenu extends StatefulWidget {
   final Function(int) _onMenuItemSelection;
@@ -30,7 +31,7 @@ class _SideMenuState extends State<SideMenu> {
                 SizedBox(height: 16),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                  child: Text('Account Balance'),
+                  child: Text('Raul Rodrigues'),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
@@ -80,6 +81,11 @@ class _SideMenuState extends State<SideMenu> {
                           widget._onMenuItemSelection(index);
                           setState(() {
                             _currentPage = index;
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomePage()),
+                            );
                           });
                         },
                       ),

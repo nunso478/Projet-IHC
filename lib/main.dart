@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:sliding_navigation_drawer/side_menu.dart';
-import 'package:sliding_navigation_drawer/swipe_animation.dart';
-
+import 'package:sliding_navigation_drawer/home.dart';
+import 'side_menu.dart';
+import 'dubai.dart';
+import 'swipe_animation.dart';
 import 'model/model.dart';
+import 'package:vertical_card_pager/vertical_card_pager.dart';
+
+import 'package:flutter/services.dart';
+import 'package:flutter/material.dart';
+import 'swipe_animation.dart';
+import 'side_menu.dart';
 
 void main() {
   runApp(MyApp());
@@ -55,10 +62,10 @@ class _MyHomePageState extends State<MyHomePage>
         body: Stack(
           children: <Widget>[
             SideMenu(
-              onMenuItemSelection: (pageIndex) {
+              onMenuItemSelection: (HomePage) {
                 swipeAnimationKey.currentState.hideNavigationDrawer();
                 setState(() {
-                  currentPage = pageIndex;
+                  currentPage = HomePage();
                 });
               },
             ),
@@ -94,18 +101,96 @@ class _MyHomePageState extends State<MyHomePage>
                   title: Text(menuItems[currentPage].menuName),
                 ),
                 body: Container(
-                  color: Colors.white,
-                  height: double.infinity,
-                  width: double.infinity,
-                  child: Center(
-                    child: Text(
-                      menuItems[currentPage].menuName,
-                      style: TextStyle(color: Colors.blue, fontSize: 32),
-                    ),
-                  ),
-                ),
+                    color: Colors.white,
+                    height: double.infinity,
+                    width: double.infinity,
+                    child: HomePage()),
               ),
             )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    final List<String> titles = [
+      " ",
+      " ",
+      "     ",
+      " ",
+      "  ",
+      " ",
+    ];
+
+    final List<Widget> images = [
+      Image.asset(
+        'assets/dubai.jfif',
+        width: 100,
+        height: 100,
+      ),
+      Image.asset(
+        'assets/vespas.png',
+        width: 100,
+        height: 100,
+      ),
+      Image.asset(
+        'assets/Mini.jpg',
+        width: 100,
+        height: 100,
+      ),
+      Image.asset(
+        'assets/copa.jfif',
+        width: 100,
+        height: 100,
+        fit: BoxFit.cover,
+      ),
+      Image.asset(
+        'assets/living.png',
+        width: 100,
+        height: 100,
+      ),
+      Image.asset(
+        'assets/jpoint.jpg',
+        width: 100,
+        height: 100,
+      ),
+    ];
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              child: GestureDetector(
+                  child: new VerticalCardPager(
+                    textStyle: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                    titles: titles,
+                    images: images,
+                    onPageChanged: (page) {},
+                    align: ALIGN.CENTER,
+                    onSelectedItem: (index) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Dubai()),
+                      );
+                    },
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Dubai()),
+                    );
+                  }),
+            ),
           ],
         ),
       ),

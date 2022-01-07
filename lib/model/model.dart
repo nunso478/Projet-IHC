@@ -4,41 +4,44 @@ import 'package:flutter/material.dart';
 class MenuItem {
   final String menuName;
   final IconData menuIcon;
+  final String path;
 
   const MenuItem({
     @required this.menuName,
     @required this.menuIcon,
+    @required this.path,
   });
 }
 
 List<MenuItem> menuItems = [
-  MenuItem(
+  const MenuItem(
     menuName: 'Home',
     menuIcon: Icons.home,
+    path: 'MyHomePage',
   ),
-  MenuItem(
+  const MenuItem(
     menuName: 'Favoritos',
     menuIcon: Icons.favorite,
   ),
-  MenuItem(
+  const MenuItem(
     menuName: 'Maps',
     menuIcon: Icons.map,
   ),
-  MenuItem(
+  const MenuItem(
     menuName: 'Discos',
     menuIcon: Icons.disc_full,
   ),
 ];
 
 Map<int, Color> color = {
-  50: Color.fromRGBO(255, 92, 87, .1),
-  100: Color.fromRGBO(255, 92, 87, .2),
-  200: Color.fromRGBO(255, 92, 87, .3),
-  300: Color.fromRGBO(255, 92, 87, .4),
-  400: Color.fromRGBO(255, 92, 87, .5),
-  500: Color.fromRGBO(255, 92, 87, .6),
-  600: Color.fromRGBO(255, 92, 87, .7),
-  700: Color.fromRGBO(255, 92, 87, .8),
-  800: Color.fromRGBO(255, 92, 87, .9),
-  900: Color.fromRGBO(255, 92, 87, 1),
+  50: const Color.fromRGBO(255, 92, 87, .1),
+  100: const Color.fromRGBO(255, 92, 87, .2),
+  200: const Color.fromRGBO(255, 92, 87, .3),
+  300: const Color.fromRGBO(255, 92, 87, .4),
+  400: const Color.fromRGBO(255, 92, 87, .5),
+  500: const Color.fromRGBO(255, 92, 87, .6),
+  600: const Color.fromRGBO(255, 92, 87, .7),
+  700: const Color.fromRGBO(255, 92, 87, .8),
+  800: const Color.fromRGBO(255, 92, 87, .9),
+  900: const Color.fromRGBO(255, 92, 87, 1),
 };
