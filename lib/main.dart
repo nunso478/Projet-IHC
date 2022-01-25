@@ -3,6 +3,12 @@ import 'package:flutter/services.dart';
 import 'package:sliding_navigation_drawer/home.dart';
 import 'side_menu.dart';
 import 'dubai.dart';
+import 'copacabana.dart';
+import 'livingroom.dart';
+import 'mini.dart';
+import 'vespas.dart';
+import 'gpoint.dart';
+
 import 'swipe_animation.dart';
 import 'model/model.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
@@ -11,6 +17,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'swipe_animation.dart';
 import 'side_menu.dart';
+
+import 'package:flutter/material.dart';
+import 'package:vertical_card_pager/vertical_card_pager.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,7 +30,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: MaterialColor(0xFFFFFFFF, color),
@@ -62,10 +71,10 @@ class _MyHomePageState extends State<MyHomePage>
         body: Stack(
           children: <Widget>[
             SideMenu(
-              onMenuItemSelection: (HomePage) {
+              onMenuItemSelection: (pageIndex) {
                 swipeAnimationKey.currentState.hideNavigationDrawer();
                 setState(() {
-                  currentPage = HomePage();
+                  currentPage = pageIndex;
                 });
               },
             ),
@@ -101,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage>
                   title: Text(menuItems[currentPage].menuName),
                 ),
                 body: Container(
-                    color: Colors.white,
+                    color: Colors.black,
                     height: double.infinity,
                     width: double.infinity,
                     child: HomePage()),
@@ -123,12 +132,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final List<String> titles = [
-      " ",
-      " ",
-      "     ",
-      " ",
+      "",
       "  ",
-      " ",
+      "      ",
+      "  ",
+      "   ",
+      "  ",
     ];
 
     final List<Widget> images = [
@@ -168,28 +177,59 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Column(
           children: <Widget>[
+            Container(
+              width: double.infinity,
+              height: 70,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 15.0),
+              ),
+            ),
             Expanded(
-              child: GestureDetector(
-                  child: new VerticalCardPager(
-                    textStyle: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
-                    titles: titles,
-                    images: images,
-                    onPageChanged: (page) {},
-                    align: ALIGN.CENTER,
-                    onSelectedItem: (index) {
+              child: Container(
+                child: VerticalCardPager(
+                  // textStyle: TextStyle(color : Colors.red),
+                  titles: titles,
+                  images: images,
+                  onPageChanged: (page) {
+                    // print(page);
+                  },
+                  onSelectedItem: (index) {
+                    print("index ------------ " + index.toString());
+                    if (index == 0) {
                       Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Dubai()),
-                      );
-                    },
-                  ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Dubai()),
-                    );
-                  }),
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => MyDubai()));
+                    } else if (index == 1) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => MyVespas()));
+                    } else if (index == 2) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => MyMini()));
+                    } else if (index == 3) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  MyCopacabana()));
+                    } else if (index == 4) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => MyLiving()));
+                    } else if (index == 5) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => MyGpoint()));
+                    }
+                  },
+                ),
+              ),
             ),
           ],
         ),

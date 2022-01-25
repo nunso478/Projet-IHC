@@ -22,6 +22,7 @@ List<MenuItem> menuItems = [
   const MenuItem(
     menuName: 'Favoritos',
     menuIcon: Icons.favorite,
+    path: 'MyFavorites',
   ),
   const MenuItem(
     menuName: 'Maps',

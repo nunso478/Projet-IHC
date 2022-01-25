@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
 
     final List<Widget> images = [
       Image.asset(
-        'assets/dubai.jfif',
+        'assets/vespas.png',
         width: 100,
         height: 100,
       ),
@@ -44,29 +44,36 @@ class _HomePageState extends State<HomePage> {
         height: 100,
       ),
       Image.asset(
-        'assets/Mini.jpg',
+        'assets/vespas.png',
         width: 100,
         height: 100,
       ),
       Image.asset(
-        'assets/copa.jfif',
+        'assets/vespas.png',
         width: 100,
         height: 100,
         fit: BoxFit.cover,
       ),
       Image.asset(
-        'assets/living.png',
+        'assets/vespas.png',
         width: 100,
         height: 100,
       ),
       Image.asset(
-        'assets/jpoint.jpg',
+        'assets/vespas.png',
         width: 100,
         height: 100,
       ),
     ];
     return Scaffold(
-      body: SafeArea(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage(
+                "https://static.roland.com/assets/images/products/gallery/rc_disco_gal.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Column(
           children: <Widget>[
             Expanded(

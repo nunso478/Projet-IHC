@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'favorites.dart';
+import 'main.dart';
+import 'maps.dart';
 import 'model/model.dart';
-import 'package:sliding_navigation_drawer/home.dart';
 
 class SideMenu extends StatefulWidget {
   final Function(int) _onMenuItemSelection;
@@ -79,13 +81,43 @@ class _SideMenuState extends State<SideMenu> {
                         ),
                         onTap: () {
                           widget._onMenuItemSelection(index);
+
                           setState(() {
-                            _currentPage = index;
+                            if (index == 0) {
+                              _currentPage = index;
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          MyHomePage()));
+                            } else if (index == 1) {
+                              _currentPage = index;
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          MyFavorites()));
+                            } else if (index == 2) {
+                              _currentPage = index;
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          MyMaps()));
+                            } else if (index == 3) {
+                              _currentPage = index;
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          MyFavorites()));
+                            }
+                            /*_currentPage = index;
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HomePage()),
-                            );
+                                  builder: (context) => MyHomePage()),
+                            );*/
                           });
                         },
                       ),
@@ -93,7 +125,7 @@ class _SideMenuState extends State<SideMenu> {
                   },
                   itemCount: menuItems.length,
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
               ],
             ),
           ),
