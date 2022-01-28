@@ -29,8 +29,8 @@ List<MenuItem> menuItems = [
     menuIcon: Icons.map,
   ),
   const MenuItem(
-    menuName: 'Discos',
-    menuIcon: Icons.disc_full,
+    menuName: 'Security',
+    menuIcon: Icons.security,
   ),
 ];
 

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "293694010566",
+    "project_id": "projetoihc-95f70",
+    "storage_bucket": "projetoihc-95f70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293694010566:android:034006c3bd3189d63453c7",
+        "android_client_info": {
+          "package_name": "com.flutteryapps.sliding_navigation_drawer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293694010566-l3pashj0h3gp8of8p20h6kkluks6qghj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIScM4O_LQXD4jCv2tw4b9HxMp2m_GbXQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293694010566-l3pashj0h3gp8of8p20h6kkluks6qghj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

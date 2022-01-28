@@ -140,7 +140,7 @@ class _MyMiniState extends State<MyMini> with SingleTickerProviderStateMixin {
                     children: [
                       Container(
                         margin: const EdgeInsets.all(10.0),
-                        child: const Text('Maximo: ',
+                        child: const Text('Máximo: ',
                             style: TextStyle(fontSize: 25)),
                       ),
                       Container(
@@ -153,24 +153,10 @@ class _MyMiniState extends State<MyMini> with SingleTickerProviderStateMixin {
                     //ROW 5 google
                     children: [
                       Container(
-                        color: Colors.orange,
-                        margin: EdgeInsets.all(25.0),
-                        child: FlutterLogo(
-                          size: 60.0,
-                        ),
-                      ),
-                      Container(
-                        color: Colors.blue,
-                        margin: EdgeInsets.all(25.0),
-                        child: FlutterLogo(
-                          size: 60.0,
-                        ),
-                      ),
-                      Container(
-                        color: Colors.purple,
-                        margin: EdgeInsets.all(25.0),
-                        child: FlutterLogo(
-                          size: 60.0,
+                        margin: const EdgeInsets.only(left: 20),
+                        child: Image.asset(
+                          'assets/miniMap.PNG',
+                          height: 168,
                         ),
                       ),
                     ],

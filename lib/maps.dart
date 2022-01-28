@@ -92,17 +92,19 @@ class _MyMapsState extends State<MyMaps> with SingleTickerProviderStateMixin {
                   ),
                   title: Text(menuItems[currentPage].menuName),
                 ),
-                body: Container(
-                  color: Colors.white,
-                  height: double.infinity,
-                  width: double.infinity,
-                  child: Center(
-                    child: Text(
-                      "Maps",
-                      style: TextStyle(color: Colors.black, fontSize: 32),
-                    ),
+                body: Column(children: <Widget>[
+                  Row(
+                    //ROW 5 google
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(top: 120, left: 35),
+                        child: Image.asset(
+                          'assets/Map.PNG',
+                        ),
+                      ),
+                    ],
                   ),
-                ),
+                ]),
               ),
             )
           ],

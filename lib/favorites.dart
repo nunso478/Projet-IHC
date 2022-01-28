@@ -100,7 +100,7 @@ class _MyFavoritesState extends State<MyFavorites>
                       Container(
                         margin: const EdgeInsets.only(left: 20),
                         child: const Text('FAVORITOS',
-                            style: TextStyle(fontSize: 50)),
+                            style: TextStyle(fontSize: 30)),
                       ),
                     ],
                   ),
@@ -125,8 +125,8 @@ class _MyFavoritesState extends State<MyFavorites>
                         child: const Text('0 ', style: TextStyle(fontSize: 20)),
                       ),
                       Container(
-                        margin: const EdgeInsets.only(left: 90),
-                        child: Image.asset('assets/likeicon.png', height: 20),
+                        margin: const EdgeInsets.only(left: 30),
+                        child: Image.asset('assets/likeicon.png', height: 50),
                       ),
                     ],
                   ),
@@ -151,8 +151,8 @@ class _MyFavoritesState extends State<MyFavorites>
                         child: const Text('0 ', style: TextStyle(fontSize: 20)),
                       ),
                       Container(
-                        margin: const EdgeInsets.only(left: 90),
-                        child: Image.asset('assets/likeicon.png', height: 20),
+                        margin: const EdgeInsets.only(left: 30),
+                        child: Image.asset('assets/likeicon.png', height: 50),
                       ),
                     ],
                   ),
